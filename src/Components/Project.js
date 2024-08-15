@@ -5,6 +5,7 @@ import cycloneImage from './cyclone.jpeg'; // Adjust the path to where the image
 import housePriceImage from './House.jpeg'; // Adjust the path to where the image is located
 import sentimentImage from './Sentimental.jpeg'; // Adjust the path to where the image is located
 
+
 const cardStyles = {
     card: {
         borderRadius: '8px',
@@ -53,92 +54,109 @@ const cardStyles = {
 
 function Project() {
     return (
-        <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-        >
-            <div className="container mt-5">
-                <h3 className="text-center mb-4">Here,My Projects</h3>
-                <div className="row">
-                    <div className="col-md-4 mb-4">
-                        <a 
-                            href="https://github.com/sakshi43/machine_learning/blob/main/cyclone_intensity_estimation.ipynb" 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            style={cardStyles.cardLink}
+        <div>
+           
+            <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+            >
+                <div className="container mt-5">
+                    <center>
+                        <motion.h4
+                            initial={{ opacity: 1 }}
+                            animate={{
+                                opacity: [0, 1, 0, 1], // Flash effect
+                            }}
+                            transition={{
+                                repeat: Infinity,
+                                repeatType: "loop",
+                                duration: 1.5, // Duration of one flash cycle
+                            }}
                         >
-                            <div 
-                                className="card" 
-                                style={{ ...cardStyles.card, ...cardStyles.card1 }}
-                                onMouseEnter={(e) => {
-                                    e.currentTarget.style.transform = 'scale(1.05)';
-                                    e.currentTarget.style.boxShadow = '0 4px 15px rgba(0, 0, 0, 0.3)';
-                                }}
-                                onMouseLeave={(e) => {
-                                    e.currentTarget.style.transform = 'scale(1)';
-                                    e.currentTarget.style.boxShadow = 'none';
-                                }}
+                            <b>My Projects</b>
+                        </motion.h4>
+                    </center>
+                    <div className="row">
+                        <div className="col-md-4 mb-4">
+                            <a 
+                                href="https://github.com/sakshi43/machine_learning/blob/main/cyclone_intensity_estimation.ipynb" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                style={cardStyles.cardLink}
                             >
-                                <div className="card-body" style={cardStyles.cardBody}>
-                                    <h6 className="card-title" style={cardStyles.cardTitle}>Cyclone Intensity Estimation</h6>
+                                <div 
+                                    className="card" 
+                                    style={{ ...cardStyles.card, ...cardStyles.card1 }}
+                                    onMouseEnter={(e) => {
+                                        e.currentTarget.style.transform = 'scale(1.05)';
+                                        e.currentTarget.style.boxShadow = '0 4px 15px rgba(0, 0, 0, 0.3)';
+                                    }}
+                                    onMouseLeave={(e) => {
+                                        e.currentTarget.style.transform = 'scale(1)';
+                                        e.currentTarget.style.boxShadow = 'none';
+                                    }}
+                                >
+                                    <div className="card-body" style={cardStyles.cardBody}>
+                                        <h6 className="card-title" style={cardStyles.cardTitle}>Cyclone Intensity Estimation</h6>
+                                    </div>
                                 </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div className="col-md-4 mb-4">
-                        <a 
-                            href="https://github.com/sakshi43/noteb/blob/main/real%20estate%20house%20prediction.ipynb" 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            style={cardStyles.cardLink}
-                        >
-                            <div 
-                                className="card" 
-                                style={{ ...cardStyles.card, ...cardStyles.card2 }}
-                                onMouseEnter={(e) => {
-                                    e.currentTarget.style.transform = 'scale(1.05)';
-                                    e.currentTarget.style.boxShadow = '0 4px 15px rgba(0, 0, 0, 0.3)';
-                                }}
-                                onMouseLeave={(e) => {
-                                    e.currentTarget.style.transform = 'scale(1)';
-                                    e.currentTarget.style.boxShadow = 'none';
-                                }}
+                            </a>
+                        </div>
+                        <div className="col-md-4 mb-4">
+                            <a 
+                                href="https://github.com/sakshi43/noteb/blob/main/real%20estate%20house%20prediction.ipynb" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                style={cardStyles.cardLink}
                             >
-                                <div className="card-body" style={cardStyles.cardBody}>
-                                    <h6 className="card-title" style={cardStyles.cardTitle}>House Price Prediction</h6>
+                                <div 
+                                    className="card" 
+                                    style={{ ...cardStyles.card, ...cardStyles.card2 }}
+                                    onMouseEnter={(e) => {
+                                        e.currentTarget.style.transform = 'scale(1.05)';
+                                        e.currentTarget.style.boxShadow = '0 4px 15px rgba(0, 0, 0, 0.3)';
+                                    }}
+                                    onMouseLeave={(e) => {
+                                        e.currentTarget.style.transform = 'scale(1)';
+                                        e.currentTarget.style.boxShadow = 'none';
+                                    }}
+                                >
+                                    <div className="card-body" style={cardStyles.cardBody}>
+                                        <h6 className="card-title" style={cardStyles.cardTitle}>House Price Prediction</h6>
+                                    </div>
                                 </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div className="col-md-4 mb-4">
-                        <a 
-                            href="https://github.com/sakshi43/text_summerization/blob/main/test_summerize.ipynb" 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            style={cardStyles.cardLink}
-                        >
-                            <div 
-                                className="card" 
-                                style={{ ...cardStyles.card, ...cardStyles.card3 }}
-                                onMouseEnter={(e) => {
-                                    e.currentTarget.style.transform = 'scale(1.05)';
-                                    e.currentTarget.style.boxShadow = '0 4px 15px rgba(0, 0, 0, 0.3)';
-                                }}
-                                onMouseLeave={(e) => {
-                                    e.currentTarget.style.transform = 'scale(1)';
-                                    e.currentTarget.style.boxShadow = 'none';
-                                }}
+                            </a>
+                        </div>
+                        <div className="col-md-4 mb-4">
+                            <a 
+                                href="https://github.com/sakshi43/text_summerization/blob/main/test_summerize.ipynb" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                style={cardStyles.cardLink}
                             >
-                                <div className="card-body" style={cardStyles.cardBody}>
-                                    <h6 className="card-title" style={cardStyles.cardTitle}>Sentiment Analysis</h6>
+                                <div 
+                                    className="card" 
+                                    style={{ ...cardStyles.card, ...cardStyles.card3 }}
+                                    onMouseEnter={(e) => {
+                                        e.currentTarget.style.transform = 'scale(1.05)';
+                                        e.currentTarget.style.boxShadow = '0 4px 15px rgba(0, 0, 0, 0.3)';
+                                    }}
+                                    onMouseLeave={(e) => {
+                                        e.currentTarget.style.transform = 'scale(1)';
+                                        e.currentTarget.style.boxShadow = 'none';
+                                    }}
+                                >
+                                    <div className="card-body" style={cardStyles.cardBody}>
+                                        <h6 className="card-title" style={cardStyles.cardTitle}>Sentiment Analysis</h6>
+                                    </div>
                                 </div>
-                            </div>
-                        </a>
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </motion.div>
+            </motion.div>
+        </div>
     );
 }
 

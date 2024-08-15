@@ -3,7 +3,7 @@ import { Button, Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import gmail from './gmail.png'; // Adjust path if necessary
 import github from './github.jpeg'; // Adjust path if necessary
 import whatsapp from './whatsapp.jpeg'; // Adjust path if necessary
-
+import Navigation from './Navigation.js';
 const iconStyles = {
     width: '24px',
     height: '24px',
@@ -13,7 +13,8 @@ const iconStyles = {
 function Contact() {
     return (
         <div>
-            <h5>Contact me on </h5>
+           
+            <center><h5>Contact me on </h5></center>
             <div className="container">
                 <center>
                     <div className="social-icons">

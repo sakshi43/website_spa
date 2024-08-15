@@ -1,21 +1,29 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Navbar, Nav } from 'react-bootstrap';
+import { motion } from 'framer-motion';
 
 function Navigation() {
     return (
-        <Navbar bg="grey" expand="lg" style={{ width: '100%' }}>
-            <Navbar.Brand as={Link} to="/">Sakshi Desale</Navbar.Brand>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="me-auto">
-                    <Nav.Link as={Link} to="/">Home</Nav.Link>
-                    <Nav.Link as={Link} to="/about">About</Nav.Link>
-                    <Nav.Link as={Link} to="/project">Project</Nav.Link>
-                    <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
-                </Nav>
-            </Navbar.Collapse>
+        
+        <motion.div
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
+        <Navbar bg="white" expand="lg" style={{ width: '100' }}>
+          <Navbar.Brand href="/">Sakshi Desale</Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="me-auto">
+              <Nav.Link href="/"><b>Home</b></Nav.Link>
+              <Nav.Link href="/about"><b>About</b></Nav.Link>
+              <Nav.Link href="/project"><b>Project</b></Nav.Link>
+              <Nav.Link href="/contact"><b>Contact</b></Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
         </Navbar>
+      </motion.div>
     );
 }
 
