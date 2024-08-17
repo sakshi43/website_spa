@@ -1,20 +1,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Navbar, Nav } from 'react-bootstrap';
+
 import image from './image.jpeg';
 import resume from './Resume.pdf';
-import Navigation from './Navigation.js'
-import About from './About.js';
-import Project from './Project.js';
-import Contact from './Contact.js';
-// Remove the Router import here
-import { Route, Routes } from 'react-router-dom';
+
+
 
 function Home() {
   return (
     <div>
      
-      {/* Remove the Router here */}
+     
      
       
       <motion.div

@@ -4,8 +4,7 @@ import Home from './Components/Home.js';
 import About from './Components/About.js';
 import Project from './Components/Project.js';
 import Contact from './Components/Contact.js';
-import { Navbar, Nav } from 'react-bootstrap';
-import { motion } from 'framer-motion';
+
 function App() {
   return (
     <div className="App">
