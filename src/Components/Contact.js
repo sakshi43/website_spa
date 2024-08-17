@@ -1,9 +1,9 @@
 import React from 'react';
-import { Button, Navbar, Nav, NavDropdown } from 'react-bootstrap';
+
 import gmail from './gmail.png'; // Adjust path if necessary
 import github1 from './github1.jpg'; // Adjust path if necessary
 import whatsapp from './whatsapp.jpg'; // Adjust path if necessary
-import Navigation from './Navigation.js';
+
 const iconStyles = {
     width: '24px',
     height: '24px',
