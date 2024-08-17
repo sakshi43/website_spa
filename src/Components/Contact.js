@@ -1,8 +1,8 @@
 import React from 'react';
 import { Button, Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import gmail from './gmail.png'; // Adjust path if necessary
-import github from './github.jpeg'; // Adjust path if necessary
-import whatsapp from './whatsapp.jpeg'; // Adjust path if necessary
+import github1 from './github1.jpg'; // Adjust path if necessary
+import whatsapp from './whatsapp.jpg'; // Adjust path if necessary
 import Navigation from './Navigation.js';
 const iconStyles = {
     width: '24px',
@@ -14,7 +14,7 @@ function Contact() {
     return (
         <div>
            
-            <center><h5>Contact me on </h5></center>
+            
             <div className="container">
                 <center>
                     <div className="social-icons">
@@ -24,7 +24,7 @@ function Contact() {
                         </a>
 
                         <a href="https://github.com/sakshi43" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                            <img src={github} alt="GitHub Icon" style={iconStyles} />
+                            <img src={github1} alt="GitHub Icon" style={iconStyles} />
                         </a>
 
                         <a href="https://wa.me/918080657342" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">

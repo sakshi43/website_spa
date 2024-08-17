@@ -1,10 +1,9 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { motion } from 'framer-motion'; // Import framer-motion
-import cycloneImage from './cyclone.jpeg'; // Adjust the path to where the image is located
-import housePriceImage from './House.jpeg'; // Adjust the path to where the image is located
-import sentimentImage from './Sentimental.jpeg'; // Adjust the path to where the image is located
-
+import { motion } from 'framer-motion';
+import cycloneImage from './cyclone.jpeg';
+import housePriceImage from './House.jpeg';
+import sentimentImage from './Sentimental.jpeg';
 
 const cardStyles = {
     card: {
@@ -13,14 +12,14 @@ const cardStyles = {
         color: 'white',
         textDecoration: 'none',
         cursor: 'pointer',
-        transition: 'transform 0.3s ease, box-shadow 0.3s ease', // Animation for hover effect
-        width: '100%', // Make the card responsive
-        height: '250px', // Set the height of the card
+        transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+        width: '100%',
+        height: '250px',
         display: 'flex',
-        flexDirection: 'column', // Align content vertically
-        justifyContent: 'center', // Center content vertically
-        backgroundSize: 'cover', // Ensure the background image covers the card
-        backgroundPosition: 'center', // Center the background image
+        flexDirection: 'column',
+        justifyContent: 'center',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
     },
     card1: {
         backgroundImage: `url(${cycloneImage})`,
@@ -34,16 +33,18 @@ const cardStyles = {
     cardTitle: {
         marginBottom: '1rem',
         fontSize: '1.25rem',
-        textAlign: 'center', // Center text
+        textAlign: 'center',
+        color: 'white', // Ensure the text color is white for better readability
         textShadow: '1px 1px 2px rgba(0, 0, 0, 0.7)', // Optional: Add text shadow for better readability
+        backgroundColor: 'transparent', // Ensure background color is removed
     },
     cardBody: {
         padding: '20px',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
-        alignItems: 'center', // Center content horizontally
-        height: '100%', // Ensure the card body takes full height
+        alignItems: 'center',
+        height: '100%',
         background: 'rgba(0, 0, 0, 0.5)', // Optional: Darken background for better text readability
     },
     cardLink: {
@@ -55,7 +56,6 @@ const cardStyles = {
 function Project() {
     return (
         <div>
-           
             <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -71,7 +71,7 @@ function Project() {
                             transition={{
                                 repeat: Infinity,
                                 repeatType: "loop",
-                                duration: 1.5, // Duration of one flash cycle
+                                duration: 1.5,
                             }}
                         >
                             <b>My Projects</b>
